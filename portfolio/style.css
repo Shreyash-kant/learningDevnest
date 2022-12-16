@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    padding: 16px;
+}
+.container > div h2{
+    text-align: center;
+}
+#profile_image{
+    width: 400px;
+    
+    border-radius: 30%;
+
+}
+.intro{
+    background-color: #211e1e;
+    padding: 20px;
+    margin: -16px;
+    text-align: center;
+}
+.intro > h1,p{
+    color: white;
+
+}
+.Sociallinks img{
+    height: 20px;
+    width: 20px;
+
+}
+.Sociallinks a{
+    margin: auto 5px ;
+}
+table, tr,td,th{
+    border-collapse: collapse;
+    border: 2px solid;
+}
+td,th{
+    padding: 10px;
+}
+#identities{
+    color:lightgreen;
+}

@@ -1,0 +1,16 @@
+.box{
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: lightgreen;
+}
+.child{
+    background-color:red;
+    height: 20%;
+    width: 50%;
+    padding: 20px;
+
+}
+#childbtn{
+    padding: 5px;
+}
