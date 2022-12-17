@@ -18,5 +18,19 @@ document.addEventListener("DOMContentLoaded",function(){
 
         console.log(document.getElementById("outside").value);
     })
+    document.getElementById("Email").addEventListener("input",function(event){
+        const emailelement = event.target;
+        //id value of the email is not in the expected format validity.typeMismatch will be true
+        if(emailelement.validity.typeMismatch){
+            //setcustomValidity is used to show custom error messages.
+            emailelement.setCustomValidity("please enter correct email address");
+            //it will triggre the validation while user is entering the value, earliar it was being validated after hitting submit button
+            emailelement.reportValidity();
+        }
+        // esle everything is correct than show show nothing in validation message
+        else{
+            emailelement.setCustomValidity("");
+        }
+    })
 })
 
