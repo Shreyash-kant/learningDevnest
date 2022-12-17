@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Tag</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <!-- method get is not safe because it put all the information inside the url
+         we can post method (to send data to server ) instead. -->
+    <form name="login" method="post">
+      <label for="outside">input outside form</label>
+      <input type="text" id="outside" />
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="off" />
+      <label for="passwd">Password</label>
+      <input type="password" id="passwd" name="password" />
+      <input
+        type="text"
+        name="MobileNumber"
+        id="mobile"
+        placeholder="mobile number"
+      />
+      <button type="submit" id="submtbtn">Submit</button>
+    </form>
+  </body>
+</html>
