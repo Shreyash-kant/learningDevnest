@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",function(){
     document.querySelector("form").addEventListener("submit",function(event){
         event.preventDefault();
         console.log(event);
-//so when this output is shown in console, it will get disappear immediately because after submission page gets refershed 
+//so when this output is shown in console, it will get disappear immediately because after submission, page gets refershed 
 // to prevent it we can use event.preventDefault(); function.
         const form = event.target;
         console.log(form);
