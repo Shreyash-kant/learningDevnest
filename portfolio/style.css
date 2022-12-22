@@ -8,14 +8,46 @@ body{
 .container{
     padding: 16px;
 }
-.container > div h2{
+.container > section h2{
     text-align: center;
+}
+#about-me > p{
+    color: black;
 }
 #profile_image{
     width: 400px;
     
     border-radius: 30%;
 
+}
+footer{
+    padding: 16px;
+    text-align: center;
+    border-top: 5px solid black;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    padding: 16px;
+    background-color:#ffffff;
+    border-bottom: 2px solid;
+    position: sticky;
+    
+}
+/* margin is added to just right side  */
+header nav > a{
+    margin-right: 16px;
+    
+    text-decoration: none;
+}
+/* last child or last achor tag will not have right margin */
+header nav > a:last-child{
+    margin-right: revert;
+}
+header nav > a:hover{
+    text-decoration: underline;
+    background-color:rgb(33 30 30 / 15%);
 }
 .intro{
     background-color: #211e1e;
@@ -55,7 +87,52 @@ form {
 form label{
     display: block;
     font-weight: 600;
+    padding: 5px;
 }
-#contact input, #contact textarea, #contact buttonid{
+#contact input, #contact textarea, #buttonid{
     width: 100%;
+}
+.mobile-nav, .menu-sec{
+    display: none;
+
+}
+
+@media (width<500px) {
+    .default-nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: revert;
+    }
+    #Menu{
+        margin-left:auto;
+        display: block;
+        border-radius: 5px;
+        background: transparent;
+    }
+    .menu-sec{
+        display: revert;
+        height: 0;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        background: #ede8e8f1;
+        width: 100%;
+    }
+    #close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: transparent;
+        font-size: x-large;
+        border: none;
+    }
+    
+}
+/* because image size was 400x400 when device width goes down than the image will fit into its contrainer  */
+@media (width<=400px){
+    #profile_image{
+        width: 100%;
+    }
 }

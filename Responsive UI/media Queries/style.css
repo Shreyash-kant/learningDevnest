@@ -1,0 +1,42 @@
+/* this is media query
+defined as @media type_of_media{   }
+types of media: print, screen, all */
+
+/* when you see the print preview of this document its body will be shown in gray color  */
+@media print{
+    body {
+        background-color: gray;
+    }
+}
+/* default rule  */
+body{
+    font-size: 1.5rem;
+}
+/* @media type and (condition) */
+@media screen and (orientation:portrait) {
+    body::after{
+        content: "portrait";
+    }
+}
+/* conditioned rule  */
+/* default rules can be changed based on the condition, when the condition is no longer fulfilled rules get back to the default rule  */
+@media screen and (orientation:landscape) {
+    body::after{
+        content: "landscape";
+        /* font-size: 2rem; */
+    }
+}
+/* if we do not specify any media type then it targets all the media types  */
+
+/* now our target feature is when a device has width of <=500px background will become green */
+@media (max-width:500px){
+    body{
+        background-color: lightgreen;
+    }
+}
+@media (min-width:800px) {
+    body{
+        background-color: lightblue;
+    }
+    
+}
